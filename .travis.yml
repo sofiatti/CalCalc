@@ -1,5 +1,7 @@
 language: python
 python:
   - "3.5"
-script:
-  - py.test calcalc/CalCalc.py
+script: 
+  - python setup.py build_ext -i
+  - python -m compileall -f .
+  - python setup.py test
